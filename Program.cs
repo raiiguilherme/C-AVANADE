@@ -3,20 +3,22 @@ using C______;
 
 Pessoa pp = new Pessoa();
 
-int [] array = new int[4];
+try
+{
+        string [] linhas = File.ReadAllLines("arquivos/oi.txt");
 
+        foreach (string lin in linhas)
+     {
+         Console.WriteLine(lin);
+}
 
-for(int i=0; i<array.Length; i++){
-    Console.WriteLine($"digite o {i+1} numero: ");
-    array[i] = int.Parse(Console.ReadLine());
+}
+catch (System.Exception e)
+{
+    Console.WriteLine("Deu erro meu chapa "+ e.Message);
+    
 }
 
 
-for(int i=0; i<array.Length; i++){
-    Console.WriteLine(array[i]);
 
-}
 
-DateTime date = DateTime.Now;
-
-Console.WriteLine(date.ToString("HH:mm"));
