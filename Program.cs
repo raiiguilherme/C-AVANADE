@@ -3,23 +3,25 @@ using C______;
 
 Pessoa pp = new Pessoa();
 
-Queue<int> fila = new Queue<int>();
+Stack<int> pilha = new Stack<int>();
 
 
+pilha.Push(13);
+pilha.Push(34);
 
-fila.Enqueue(1000);
-fila.Enqueue(10213);
+Console.WriteLine("olhando a pilha");
 
-foreach (int item in fila)
+foreach (int item in pilha)
 {
     Console.WriteLine(item);
 }
 
-Console.WriteLine("vamos remover um elemento agr");
-fila.Dequeue();
+Console.WriteLine("removendo um agr");
 
-Console.WriteLine("mostrando novamente a fila sem o item retirado");
-foreach (int item in fila)
+pilha.Pop();
+
+Console.WriteLine("mostrando após remoção");
+foreach (int item in pilha)
 {
     Console.WriteLine(item);
 }
@@ -38,13 +40,22 @@ foreach (int item in fila)
 
 
 
+// fila.Enqueue(1000);
+// fila.Enqueue(10213);
 
+// foreach (int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
 
+// Console.WriteLine("vamos remover um elemento agr");
+// fila.Dequeue();
 
-
-
-
-
+// Console.WriteLine("mostrando novamente a fila sem o item retirado");
+// foreach (int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
 
 
 
